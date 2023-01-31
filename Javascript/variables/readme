@@ -1,0 +1,10 @@
+JavaScript was created by a Netscape developer named Brendan Eich
+
+A statement is a code that declares a variable or instructs the JavaScript engine to do a task. A simple statement is terminated by a semicolon
+
+keywords reserved words: 
+
+break	case	catch continue	debugger	default else export	extends function if	import new	return	super throw	try	null void	while	with class	delete	finally in	switch	typeof yield	const	do for	instanceof	this var
+
+ESC22
+enum implements	let protected	private	public await interface	package implements	public
