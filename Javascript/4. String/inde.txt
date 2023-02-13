@@ -1,0 +1,22 @@
+Methods
+
+ * toLowerCase()
+ * toUpperCase()
+ * toString()
+ * trim()
+ * trimEnd()
+ * trimStart()
+ * valueOf()
+ * length
+
+ * concat():
+ * startsWirh():
+ * endsWith():
+ * includes(): 
+ * indexOf(): 
+ * lastIndexOf():
+ * repeat(): 
+ * split(): 
+ * substring(): 
+
+
