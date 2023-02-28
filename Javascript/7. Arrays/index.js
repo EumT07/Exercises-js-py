@@ -95,15 +95,39 @@ let new_Fruts = fruts.splice(1, 2,"orange");
 console.log("Array of fruts: ", fruts);// result: [ 'apple', 'orange', 'strawberry' ]
 console.log("splice Array of fruts: ", new_Fruts); // removed: [ 'book', 'banana' ]
 
-//join
-//split
+//join: It allows us to create a string from an array
+let cpu = ["i3 2600", "i3 5400", "i5 3600", "i5 5800","i7 5800", "i7 12000"];
 
+let cpu_string_1 = cpu.join(" ");//i3 2600 i3 5400 i5 3600 i5 5800 i7 5800 i7 12000
+let cpu_string_2 = cpu.join("-");//i3 2600-i3 5400-i5 3600-i5 5800-i7 5800-i7 12000
+let cpu_string_3 = cpu.join("\n");
+
+console.log("join(' ') : ",cpu_string_1);
+console.log("join('-'): ",cpu_string_2);
+console.log("join('\n'): ",cpu_string_3);
+
+//split: It allows us to creat an array from a string
+let color_list = "red, blue, yellow, purple";
+let new_ArrayWithSplit = color_list.split(", ");
+console.log("Split: ",new_ArrayWithSplit);
+
+//ArrayFrom: HTML DOM
+// let dishes = Array.from(document.querySelectorAll('.dishes p'));
+// let dishes_list = dishes.map(element => element.textContent);
+
+//Arrays of:
+let monitor_list = Array.of("Samsung", "LG", "Benq","Dell", "Hp");
+console.log("array of",monitor_list);
 
 //Sorting
 
-//Loops
+let fruts_list2 = ["Avocado","Lemon","Apple","Pear","Banana","Orange","Coconut"];
 
-//ArrayFrom
+console.log("Antes: ", fruts_list2);
+//sort()
+console.log("Sort: ", fruts_list2.sort());
+//reverse()
+console.log("Reverse: ", fruts_list2.reverse());
 
 
 
