@@ -1,3 +1,4 @@
+"use strict"
 //Object POO: Object Oriented  Programming Oriented 
 
 // #1 {}

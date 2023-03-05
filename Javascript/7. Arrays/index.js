@@ -130,10 +130,45 @@ console.log("Sort: ", fruts_list2.sort());
 console.log("Reverse: ", fruts_list2.reverse());
 
 
+//SET: objects are collections of values. A value in the Set may only occur once; it is unique in the Set's collection. You can iterate through the elements of a set in insertion order. The insertion order corresponds to the order in which each element was inserted into the set by the add() method successfully (that is, there wasn't an identical element already in the set when add() was called).
 
 
+const array = [1, 2, 3, 4, 5, 6, 1, 2, 5, "hello", { id: 5 }, "hello"];
 
+const miSet = new Set(array);
 
+console.log(array);
+console.log(miSet);
+
+// .add()
+miSet.add(9);
+console.log(miSet);
+
+// .delete()
+miSet.delete("hola");
+console.log(miSet);
+
+// .clear()
+// miSet.clear()
+// console.log(miSet)
+
+// .has() -> tienes
+// console.log(array.includes(2))
+console.log(miSet.has(40));
+
+// .size
+console.log(miSet.size);
+
+miSet.forEach(valor => {
+  console.log(valor);
+});
+
+const it_miSet = miSet.values();
+console.log(it_miSet);
+
+//Spred operator
+const ar_miSet = [ ...miSet ]
+console.log(ar_miSet[1]);
 
 
 
