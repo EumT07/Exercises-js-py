@@ -3,8 +3,8 @@
 string = "You must do your homework, the more you study the more you learn"
 
 #Startwith()
-print("stratsWith: ",string.startswith("homework"))#False
-print("stratsWith: ",string.startswith("You"))#True
+print("startsWith: ",string.startswith("homework"))#False
+print("startsWith: ",string.startswith("You"))#True
 
 #endswith()
 print("endaswith: ",string.endswith("the"))#False

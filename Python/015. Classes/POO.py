@@ -74,7 +74,7 @@ cliente2 = Cliente(1425783,"Elizabeth", "Taylor")
 
 empresa = Empresa(clientes=[cliente1,cliente2])
 empresa.mostrar()# Va mostrar los dos clientes
-empresa.buscar_cliente(23512820)# Eublan
+empresa.buscar_cliente(4125472)#
 empresa.buscar_cliente(ci=2145874)# No encontrado
-empresa.borrar_cliente(8485088)# Elimina a carmen
-empresa.mostrar()#Solo va mostrar a Eublan
+empresa.borrar_cliente(1425783)# 
+empresa.mostrar()#

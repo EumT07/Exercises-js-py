@@ -127,7 +127,7 @@ ns = [10,50,100]
 dble(ns)
 print(ns)  #Take reference
 
-# Other way to pass valyes by rerencen
+# Other way to pass valyes by referencen
 
 def new_value(number):
     return number * 2

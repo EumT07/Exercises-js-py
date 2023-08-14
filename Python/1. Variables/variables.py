@@ -14,8 +14,8 @@ print(23) #Int
 print(3.14) #float
 
 #Boolean
-print(True) # -> 0
-print(False) # -> 1
+print(True) # -> 1
+print(False) # -> 0
 
 #Variables
 

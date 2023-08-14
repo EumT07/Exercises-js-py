@@ -94,9 +94,28 @@ console.log("substring(): ",result_D);
 let stringText5 = "Hello my friend today I'm going to tell you something really important";
 let result_E = stringText5.split(' ');
 console.log("split(' '): ",result_E);
+/*[
+    'Hello',  'my',
+    'friend', 'today',
+    "I'm",    'going',
+    'to',     'tell',
+    'you',    'something',
+    'really', 'important'
+  ]
+  */
 
 let stringText6 = "Hello-my-friend-today-I'm-going-to-tell-you-something-really-important";
-let result_F = stringText6.split("-");
+//Array
+let result_F = stringText6.split("-"); 
+/*[
+    'Hello',  'my',
+    'friend', 'today',
+    "I'm",    'going',
+    'to',     'tell',
+    'you',    'something',
+    'really', 'important'
+  ]
+  */
 console.log("split('-'): ",result_F);
 
 //trim(): it deletes any space
