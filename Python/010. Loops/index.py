@@ -5,71 +5,71 @@ Loops: Permite recorrer las colecciones; listas, tuplas, set o conjuntos, asi co
 
 ## While
 
-# c1 = 0
-# while c1 <= 3:
-#     # print("Value before add 1: ", c)
-#     c1 +=1
-#     print("Value after: ", c1)
-# else:
-#     print(f"End : {c1}")
+c1 = 0
+while c1 <= 3:
+    # print("Value before add 1: ", c)
+    c1 +=1
+    print("Value after: ", c1)
+else:
+    print(f"End : {c1}")
 
 # While with break, continue
 
-# c2 = 0
-# while c2 <= 10:
-#     c2 += 1
-#     if c2 == 4:
-#         # print(f"Break the loops: value c2 = {c2}")
-#         # break
-#         print(F"Continue the loops")
-#         continue
-#     print(c2)
-# else:
-#     print(f"End : {c2}")
+c2 = 0
+while c2 <= 10:
+    c2 += 1
+    if c2 == 4:
+        # print(f"Break the loops: value c2 = {c2}")
+        # break
+        print(F"Continue the loops")
+        continue
+    print(c2)
+else:
+    print(f"End : {c2}")
 
 # With list
 
 food = ["arepa", "tacos","empanadas"]
 
-# i = 0
-# while i < len(food):
-#     print(food[i])
-#     i += 1
+i = 0
+while i < len(food):
+    print(food[i])
+    i += 1
 
 #################### For #####################
 
 # List-string
 foods = ["apples", "bread", "cheese", "milk"]
 
-# print(foods)
-# print(foods[3])#milk
+print(foods)
+print(foods[3])#milk
 
 #for in
 
-# for food in foods:
-    # print(food)
+for food in foods:
+    print(food)
 
 #for in with break and continue
-# for food in foods:
-#     if food == "cheese":
-#         print("You need to buy it because it's tasty")
-#         # break
-#         continue
-#     print(food)
+for food in foods:
+    if food == "cheese":
+        print("You need to buy it because it's tasty")
+        # break
+        continue
+    print(food)
 
 #  from 10 to 100
 numbers = [1,2,3,4,5,6,7,8,9,10]
 
-# for number in numbers:
-#     number *= 10
-#     print(number)
+for number in numbers:
+    number *= 10
+    print(number)
 
 #Creating an external index
 i = 0
 for number in numbers:
     numbers[i] *= 10
     i += 1
-    # print(numbers)
+    print(numbers)
 
 
 ## enumerate ##

@@ -33,7 +33,8 @@ print(re.match("Hello",text2))
 
 text3 = "Today is a good day"
 result = re.split(" ", text3)
-print("Split: ", result)
+print("Split: ", result) #get a new list
+
 # Sub
 result_sub = re.sub("good","bad",text3)
 print("Sub: ",result_sub)

@@ -52,6 +52,7 @@ def user():
 userDNI = user()
 print(userDNI)
 
+# Destructuring
 name, lastName, age = user()
 print(f"""\n
 # Name: {name}

@@ -10,7 +10,7 @@ text2 = "Hello, today you will learn a new \"thing\" about strings"
 print(text1)
 print(text2)
 
-#routes or links : 1 \t -> don't this.
+#routes or links : 1 \t -> don't do this.
 print("C:\name\pasth\thought.com")
 
 #Add r in order to can get a good path
@@ -90,5 +90,5 @@ print("hello world".isupper())#False
 
 #Test is there is a space inside the text
 print("\n< isspace >\n" )
-print(" ".isspace())
+print(" ".isspace())#True
 print("-".isspace())

@@ -1,4 +1,4 @@
-# 6 Armuments and params *args
+# 6 Armuments and params *args return tuple
 
 def indeterminados_posicion(*args):
     print(args)

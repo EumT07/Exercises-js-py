@@ -71,7 +71,9 @@ print("Sorted List(reverse=True): ", sorted(num_list,reverse=True))
 print("\n deque, FIFO: First in First Out \n")
 
 """
-Pilas o stacks : Añadir o sacar , ultimo en entrar primero en salir, fifo : First in first out
+Pilas o stacks : Añadir o sacar , ultimo en entrar primero en salir, 
+* fifo : First in first out
+* lifo : last in first out
 """
 
 pila = [1,2,3]

@@ -57,8 +57,8 @@ days_result_get = days.get("friday","Friday not exists")
 print(days_result_get)
 
 # pop(): Delete items
-# days_result_pop = days.pop("monday", "Monday doesn't exist")
-# print(days_result_pop)
+days_result_pop = days.pop("monday", "Monday doesn't exist")
+print(days_result_pop)
 
 
 #Getting keys
