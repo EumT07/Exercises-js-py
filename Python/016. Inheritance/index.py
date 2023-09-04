@@ -150,3 +150,7 @@ c = C()#Soy clase B --> va primero el que vaya deacuerdo a la posicion que se en
 c.a()#Este metodo se hereda de A
 c.b()#Este metodo se hereda de B
 c.c()#Este metodo se hereda de C
+
+#MRO -> methods resolution order: permite darle orden a las herencias
+
+# print(c.mro()) permite ver el flujo

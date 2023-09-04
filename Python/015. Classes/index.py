@@ -99,3 +99,23 @@ c.add(movie2)
 c.add(Movie("Capitan rock",45,2015))
 c.add(Movie ("Lluvia",85,2008))
 c.show()
+
+
+"""
+Encapsulacion de atributos y metodos, funcionabilidad, para impedir el acceso a los metodos. 
+"""
+
+class Ejemplo:
+    __atributo_privado = print("Este es un atributo privado")
+    def __metodo_privado(self):
+        print("Este es un metodo privado")
+    def atributo_publico(self):
+        return self.__atributo_privado
+    def metodo_publico(self):
+        return self.__metodo_privado()
+        
+e = Ejemplo()
+# e.__atributo_privado
+# e.__metodo_privado()
+e.atributo_publico()
+e.metodo_publico()

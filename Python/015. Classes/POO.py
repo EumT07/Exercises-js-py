@@ -2,7 +2,7 @@
 POO : Programacion rientada a objetos, paradigma, soluciones de problemas.
 
 """
-#Programcion estructurada
+#Programcion estructurada o funcional
 clientes = [
     {"Nombre":"Evans","Apellido":"smith", "ci":41254784},
     {"Nombre":"Elizabet","Apellido":"tailor", "ci":4521478}
