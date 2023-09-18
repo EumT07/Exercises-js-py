@@ -39,7 +39,6 @@ const getData = async () => {
       console.log(error)
     }
   }
-
 getData();
 
 
@@ -62,14 +61,14 @@ function getUser(name) {
     })
   }
 
-  function getArticles(userId) {
-    return new Promise((resolve, reject) => {
-      const userArticles = articles.find((user) => user.userId === userId)
+function getArticles(userId) {
+  return new Promise((resolve, reject) => {
+    const userArticles = articles.find((user) => user.userId === userId)
   
-      if (userArticles) {
-        return resolve(userArticles.articles)
-      } else {
-        reject(`Wrong ID`)
-      }
-    })
-  }
+    if (userArticles) {
+      return resolve(userArticles.articles)
+    } else {
+      reject(`Wrong ID`)
+    }
+  })
+}
