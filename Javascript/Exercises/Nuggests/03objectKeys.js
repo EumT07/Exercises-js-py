@@ -48,3 +48,41 @@ let model = "Mustang"
 newProperty(car,model)
 
 console.log("Object",state);
+
+
+//For in Loop
+const laptop = {
+    brand: "Samsung",
+    processor: "i7",
+    ram: 16
+}
+
+for (const propertyName in laptop){
+    console.log(`${propertyName} : ${laptop[propertyName]}`);
+}
+
+
+//Objects.keys()
+console.log("Keys");
+const laptoKeys = Object.keys(laptop)
+console.log(laptoKeys);
+
+//Objects.values()
+console.log("Values");
+const laptoValues = Object.values(laptop)
+console.log(laptoValues);
+
+//Objects.entries()
+console.log("Entries");
+const laptopEntries = Object.entries(laptop)
+console.log(laptopEntries);
+
+//MAp method
+const newResult = laptopEntries.map(item =>{
+    // console.log("Show item");
+    // console.log(item)
+    const [kyes, values] = item
+    console.log("keys: ", kyes);
+    console.log("vavalues: ",values);
+})
+

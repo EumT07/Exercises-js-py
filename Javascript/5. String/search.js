@@ -129,3 +129,22 @@ console.log("trim():",message2.trim());
 
 //trimEnd(): it deletes any space at the end of the text 
 console.log("trimEnd():",message2.trimEnd());
+
+
+//Includes
+
+const products = [
+  {title: "Modern Poster"},
+  {title: "Bar Stool"},
+  {title: "Armchair"},
+  {title: "Modern Chair"}
+]
+
+const textProduct = "o";
+
+const filteredProducts = products.filter((product)=>{
+  console.log(product.title.toLowerCase().includes("er"));
+  // product.title.toLowerCase().includes(textProduct)
+})
+
+console.log(filteredProducts);
