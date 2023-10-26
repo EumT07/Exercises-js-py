@@ -1,0 +1,269 @@
+"Globalthis" : variable global tanto para el navegador o node, en toda nuestra app
+
+Importar un archivo
+===================
+Modulos: partes de la pp que se puede subdividir en multiples partes.
+
+se puede importar de la siguiente forma.
+
+const nameOfFile = require("./nombre del archivo");
+
+
+Para exportar se ultiza un objeto de js.
+
+-------(1)------
+archivos individuales
+
+exports.namefuncion = namefuncion;
+
+-------(2)------
+archivos grupales
+
+module.exports = nameFuncion, object, variables;
+
+Una vez solo correspondera llamar a la funcion. 
+
+=======
+module
+=======
+
+Para cuando se necesite subir todo el proyecto se puede eliminar la carpeta node_modules
+
+
+======
+ init
+======
+
+Para iniciar un nuevo proyecto, se debe tener los archivos para que algunas pagina sepa el contenido de todo los archivos y modulos que tienes.
+
+
+npm init 
+
+
+REPL = Read - Eval - Print - Loop
+
+Para eliminar algun modulom --> npm unistall express
+
+npm auditar --> audita el file
+
+------------------------------------------PATH
+
+Path: Permite conocer la direccion de algun arrchivo o conocer la ruta de alguna carpeta.
+
+    const path = require("path");
+
+propiedades a usar:
+    __dirname: direccion de la carpeta
+    __filename: direccion de un arrchivo
+
+Para mostrar una dirrecion exacta, utilizamos:
+    basename, 
+
+    path.basename(__filename); mostrar el arrchivo
+    path.join(__filename); va juntar ubicaciones
+
+
+
+-------------- Procesos -------------------------
+
+Procesos para poder leer o imprimir en la consola node js.
+
+    process.stdout.write (Saliente)/Se mostrara en la consola;
+    
+    process.stdin.on (Entrate)/ Podremos enviar informacion a la consola, a traves de un evento.
+
+    ejemplo:
+
+        process.stdout.write("Dime tu nombre ");
+
+        process.stdin.on("data", function (data){
+            nombre = data.toString().trim();//.trim 
+            Trim(): quitar los caracteres innecesarios
+            process.stdout.write("hola " + nombre);// 
+            .write para poder escribir en la pantalla
+            process.exit();// Para salir del proceso
+        })
+
+------------------------------------ Readline --------------
+
+Readline; Permite escribir mensaje por la consola de la misma manera que process pero de una manera resumida.
+
+    let readline = require("readline");
+
+    let rl = readline.createInterface(process.stdin, process.stdout);
+
+    ejemplo:
+    
+    1)
+
+    rl.question("Cual es tu sueño: ", (res)=>{
+    console.log(`Hola, ${res}`);
+    process.exit(); //Para que termine 
+    });
+
+    2) 
+     var persona = {
+    nombre: " ",
+    comentarios: []
+        };
+
+    // modulos de node.js document
+
+    rl.question("Cual es tu nombre: ", (resp) => {
+    persona.nombre = resp;
+    
+    rl.setPrompt("Dime un comentario: ");//EScribe un output, pero no se va a escribir en la consola hasta 
+    rl.prompt();// uses esta funcion.
+    });
+    
+    event
+    rl.on se recibe una informacion
+--------------------------------------------------- util --------------------------------------------------------
+Util; permite establecer formatos, leer* funciones espesificas.
+
+    readline tambien usa estas fu nciones;
+        
+    rl.setPrompt();//EScribe un output, pero no se va a escribir en la consola hasta 
+    rl.prompt();// uses esta funcion.
+
+    rl.on()// Permite capturar eventos que se escriben. estilo funcioones events
+--------------------------------------------------- event ---------------------------------------------------------
+events; Permite crear eventos cuando los ejecutemos
+    
+    const eventEmitter = require("events").EventEmitter;
+
+    const util = require("util");
+
+    Permite trabajar con objetos para hacer mas dinamica las app, y la interaccion con la consola.
+
+     "  util.inherits(object, eventEmitter); Hereda la informacion el constructor o super contructor del obejto o clase. "
+
+---------------------------------------------------- export ------------------------------------------------------
+Export, para poder utilizar archivos de un file en otro; se debe exportar y requerir.
+
+        module.export = Name;// lo que se debea exportar en este caso un objeto.
+
+        const name = require("./Name); se debe establecer la direcion del arrchivo. 
+
+        *Name: es el nombre del archivo a exportar, archivo js. 
+----------------------------------------------------- Readfile ---------------------------------------------------
+ReadFile; Permite leer archivos 
+     
+    readdirSync = permite saber la direccion del archivo forma Sincrono
+    readdir = forma Asincrono
+
+    const fs = require("fs);
+
+    fs.readdir("./, (error, data) =>{
+        if(error){
+            throw error;
+        }
+        console.log(data);
+
+        fs.readFile("./informacion.txt", "UTF-8", (error, file) => {
+            if (error){
+            throw error;
+                    }
+            console.log(file);
+        })
+
+        console.log("Contenido del arc hivo");
+    });
+------------------------------------------------------ writefile ---------------------------------------------------
+
+WriteFile; permite crear un archivo;
+
+    const fs = require("fs");
+
+    const file = "info.txt";
+
+    //Si existe un archivo:
+
+    Parte 1; 
+    //.constants.f_ok; va devolver si un archivo existe(si es o no visible).
+
+        fs.access(file, fs.constants.F_OK, (err) => {
+            if(err){
+            console.log("There is not a file with that name");
+            }else{
+            console.log("There is a file with that name");
+            }
+    });
+
+    parte 2;
+    EScribir un file: 
+
+        fs.writeFile(file, CONTENIDO, (err) =>{
+            if(err) throw ("There was error when you tried to write a file");
+
+            console.log("You have wrote a file ")
+            });
+
+    Escribir una nueva linea de codigo;
+
+        const addText = "\nThis is a new line of code";
+
+        fs.appendFile(file, addText, (err)=>{
+        if(err) throw("You can add this new line");
+        console.log("You have added a new line of code");
+        });
+
+------------create folder ---------------------------
+sincrono
+Permite crear una carpeta.
+        fs.mkdir("css", (err) =>{
+             if(err){
+             throw("error: " + err);
+            }
+
+            console.log("You have made a folder");
+            });
+
+---------------//rename 
+//rename sincrono
+//fs.renameSync("./1", "./2");
+
+//1. El archivo que se desea renombrar(.formato)
+//2. El nombre del archivo que se desea obtener(El nuevo nombre)(.formato)
+
+//fs.renameSync("./file.txt", "./config.txt");
+
+//rename Asicrono
+/*
+fs.rename("./config.txt", "./file.txt", (err) => {
+    if(err){
+        throw("There is a error: " + err);
+    }
+    console.log("You have changed file's name");
+});
+
+----------------// move
+
+fs.rename("./file2.txt", "./folder2/file2.txt", (err)=>{
+    if(err){
+        throw("There is a error: " + err)
+    }else{
+        console.log("You have moved a file from principal folder to folder1")
+    }
+});
+
+----------------// delete 
+
+// Elimnar un file al moverlo. 
+
+//Sincrono.
+
+//fs.unlinkSync("./file2.txt");
+
+
+// Asincrono 
+fs.unlink("./newfile.txt", (err)=>{
+    if(err){
+        throw("There is an error: " + err);
+    }else{
+        console.log("You deleted a file");
+    }
+});
+
+---------------------// borrar cache
+npm cache clean --force 
