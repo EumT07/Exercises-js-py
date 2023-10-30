@@ -1,0 +1,28 @@
+Pasos a recordar_
+npm init (manual)
+npm init --yes (de manera rapido automatica);
+
+Main: Espesifica el archivo que ejecuta node
+
+Modulos: para instalar
+
+npm i express --> framework de node js
+npm i ejs(Motor Platilla para aplicar en html)
+npm i morgan(ver por consola los url)
+npm i nodemon -D (dependencia del desarrollo)
+
+Para leer el codigo dentro de una carpeta
+
+node src/file.js or node src 
+
+Ambas son lo mismo.
+
+Cambiar script:
+
+    "Start": "node src/app.js" --> Para ejecutar la app desde la aplicacion
+
+    "dev" : " node src/app.js " (Permite ejecutar los comando por el usuario)
+        Nota: cuando istalamos nodemon hay que cambiar el node y colocar nodemon para activar el reinicion del servidor.
+
+    --> para apoder ejecutarlo npm run dev
+
