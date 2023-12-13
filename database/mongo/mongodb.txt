@@ -1,0 +1,86 @@
+Iportar Base de dato:
+
+import mongoose from "mongoose";
+
+
+Crear Base de datos: 
+
+**URL**
+
+const url = "mongodb://localhost/name";
+name: nombre de la base de dato que utilizaras
+
+
+///Async away para que pueda cargar todo el proceso
+
+const db = await mongoose.connect(url,{
+    useNewUrlParse: true,
+    useUnifiedTopology: true,
+    family: 4
+});
+
+console.log("DataBase is Connected to.".bgBlue, db.connection.name);
+
+***Crear Modelo****
+
+//Models
+
+const userSchema = new mongoose.Schema(
+    {
+        
+        name: String,
+        lastName: String,
+        email: {
+            type: String,
+            unique: true
+        },
+        country: String, 
+    },
+    {
+        timestamps: true,
+        versionKey: false
+    }
+);
+
+//Exportar El modelo #1
+const model =  mongoose.model("Model", userSchema);
+export model;
+
+//Exportar El modelo #2
+export default mongoose.model("Model", userSchema);
+
+
+****************
+Insertando datos
+****************
+
+const myModel = new Model({
+    name = "qry/params/data",
+    lastname = "qry/params/data"
+});
+
+await myModel.save()
+
+
+****************
+Finding a items
+***************
+const value = await user.find()
+
+find name:
+
+await user.find({name: "value"})
+
+All find: 
+
+findById(id)
+
+update:
+.update()
+
+Remove:
+.remove({_id: id})
+
+
+
+

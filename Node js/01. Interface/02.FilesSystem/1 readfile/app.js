@@ -28,7 +28,7 @@ fs.readdir("./", (err,data)=>{
 
 
     //Leer un archivo de manera Sync
-    
+    //readfileSync(Route,encode)
     const file = fs.readFileSync("./text.txt", "UTF-8");
     console.log(file);
 

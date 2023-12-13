@@ -1,0 +1,217 @@
+dropMongo db --> Open source
+NoSql --> Not Only SQL
+humongus = gigante
+Base dato --> Maneja grandes bases de datos, de forma escalable segura y rapida.
+
+Escrito en C++
+Esta orientado a Documentos, Los datos que se guardan en la base de datos
+escalado horizontal; si la aplicacion crece, se le va agregar otro servidor para que nuestra informacion se vaya expandientedo.
+
+Descargarlo e instalarlo.
+Para agregar al path y poder usarlo desde la consolda CMD
+C:\Program Files\MongoDB\Server\4.4\bin
+
+mongod --version para saber la version del mongo instaldado, 
+
+mongod --> para iniciar la base de dato
+. - . - . -
+mongo --> para utilizar o controlar la base de dato.
+
+---------------------------------------------------------------------------------------------------------
+Mongo db --->>> guarda los datos como collection.
+---
+cls para limpiar.
+
+_____________________
+		     |
+function in mongo db |
+_____________________|
+
+function ana(a) {if (a >= 4) return "hola"; return "chao"}
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+. show dbs --> muestra tu base de datos
+
+. db --> test (base de dato actual)
+
+Crear Base de dato:
+
+. use "name"-> webstore --> 	para crear una base de dato, comando: use, y luego escribir el nombre de la nueva 			base de datos.
+
+. show collections : para mostrar que posee la base de datos
+
+. db.products.insert({"name": "laptop"}) : para poder ingresar datos a la base de dtos y estas pueda aparecer el el show dbs (lista de bases de datos)
+
+. db.dropDatabase() : --> para eliminar la base de datos, pero hay que asegurarse que estamos en la base 			de datos a eliminar.
+
+. db.createCollection("users"). : paa crear una base de dato de una manera distinta.
+
+DB methods:
+
+. db.name.drop() -->: para eliminar collectiones   
+                    name = al nombre de la base de dato. 
+
+document object
+
+	{
+		"name": "laptop",
+		"precio": 40,
+		"active": false,
+		"created_at": new Date("12/12/1999"),
+		"somedata": [1, "a", []],
+		"factuturer":{
+			"name": "dell",
+			"version": "xps",
+			"location": {
+				"city": "usa",
+				"address": "13 sur"
+					}
+				}
+	}
+db.products.find() = Para mostrar el objeto almacenado
+db.products.find().pretty() : para mostrar el objeto de mejor manera.
+
+	formatos json se transforma en formatos Bson :sirve para convertir los json a un formato binario.
+ 
+__________________
+
+Nuevos Documents
+__________________
+
+db.products.insert([
+	{ 
+		"name": "mouse",
+		"descriptions": "razer mouse",
+		"tags": ["Computers", "gamming"]
+	},
+	{ 
+		"name": "Monitor",
+		"descriptions": "LG",
+		"tags": ["Computers", "Trading"]
+	}	
+
+])
+
+
+---------------------------------
+
+Para buscar por propiedades:
+
+db.products.find({name: "mouse"}) --> Va mostrar todos los datos que consisidan con mouse.
+
+db.products.findOne({"tags":"Computers"}) --> va mostar el primero que se encuestre, que tenga tags y computer
+
+db.products.findOne({"name": "name_product},{"name":1,"_id":0}): Va traer solo el nombre, y obviara el id
+
+db.products.findOne({"tags":"Computers"}).sort({"name:1}) --> ordenar alfabeticamente
+
+db.products.find().limit(2) --> va devolver dos datos, puede ser cualquier numero, y va mostrar los ultimos
+
+db.products.count() --> para saber la cantidad  de documentos
+
+aplicar una funcion forEach();
+
+	db.products.find().forEach(product => print("Product Name: " + product.name))
+
+	*Puedes elegir cualquier propiedad.
+----------------------------
+Editar una propiedad
+	
+	db.products.update({Buscar},{Reemplazar})
+		Buscar: encuentra un product o dato
+		Reemplazer: y permite reemplazarlos con el nuevo valor. 
+		ejemplo:
+	
+	db.products.update({"name":"keyboard},{"price": 50})	
+
+
+Para insertar un nuevo documento, con update().
+
+	db.products.update({"name":"desktop"}, {$set: {"description": "Gaming Desktop"}}, {upsert: true})
+
+
+Para Aumentar valores numericos.
+
+	db.products.update({"name":"keyboard"}, {$inc: {"price": 0.01}})	
+
+Para renombrar Propiedades:
+
+	db.products.update({"name": "laptop"}, {$rename: {"name": "nombre"}})
+
+Para eliminar datos:
+
+	db.products.remove({"nombre": "laptop"})
+
+Para eliminar todos:
+
+	db.products.remove({})
+
+
+. db.help():  nos muestra un menu de ayuda
+
+Mongo db pdf Python: chapter 22 / 70pg 
+_________________________________________________________________________________________________________
+		DB methods:
+        db.adminCommand(nameOrDocument) - switches to 'admin' db, and runs command [just 				calls db.runCommand(...)]
+        db.aggregate([pipeline], {options}) - performs a collectionless aggregation on 				this database; returns a cursor
+        db.auth(username, password)
+        db.cloneDatabase(fromhost) - will only function with MongoDB 4.0 and below
+        db.commandHelp(name) returns the help for the command
+        db.copyDatabase(fromdb, todb, fromhost) - will only function with MongoDB 4.0 and below
+        db.createCollection(name, {size: ..., capped: ..., max: ...})
+        db.createUser(userDocument)
+        db.createView(name, viewOn, [{$operator: {...}}, ...], {viewOptions})
+        db.currentOp() displays currently executing operations in the db
+        db.dropDatabase(writeConcern)
+        db.dropUser(username)
+        db.eval() - deprecated
+        db.fsyncLock() flush data to disk and lock server for backups
+        db.fsyncUnlock() unlocks server following a db.fsyncLock()
+        db.getCollection(cname) same as db['cname'] or db.cname
+        db.getCollectionInfos([filter]) - returns a list that contains the names and options of the db's 	collections
+        db.getCollectionNames()
+        db.getLastError() - just returns the err msg string
+        db.getLastErrorObj() - return full status object
+        db.getLogComponents()
+        db.getMongo() get the server connection object
+        db.getMongo().setSecondaryOk() allow queries on a replication secondary server
+        db.getName()
+        db.getProfilingLevel() - deprecated
+        db.getProfilingStatus() - returns if profiling is on and slow threshold
+        db.getReplicationInfo()
+        db.getSiblingDB(name) get the db at the same server as this one
+        db.getWriteConcern() - returns the write concern used for any operations on this db, inherited 	from server object if set
+        db.hostInfo() get details about the server's host
+        db.isMaster() check replica primary status
+        db.hello() check replica primary status
+        db.killOp(opid) kills the current operation in the db
+        db.listCommands() lists all the db commands
+        db.loadServerScripts() loads all the scripts in db.system.js
+        db.logout()
+        db.printCollectionStats()
+        db.printReplicationInfo()
+        db.printShardingStatus()
+        db.printSecondaryReplicationInfo()
+        db.resetError()
+        db.runCommand(cmdObj) run a database command.  if cmdObj is a string, turns it into {cmdObj: 1}
+        db.serverStatus()
+        db.setLogLevel(level,<component>)
+        db.setProfilingLevel(level,slowms) 0=off 1=slow 2=all
+        db.setVerboseShell(flag) display extra information in shell output
+        db.setWriteConcern(<write concern doc>) - sets the write concern for writes to the db
+        db.shutdownServer()
+        db.stats()
+        db.unsetWriteConcern(<write concern doc>) - unsets the write concern for writes to the db
+        db.version() current version of the server
+        db.watch() - opens a change stream cursor for a database to report on all  changes to its non-	system collections.
+_________________________________________________________________________________________________________
+
+
+
+
+
+
+
+ 
+
+

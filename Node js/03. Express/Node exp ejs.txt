@@ -11,6 +11,7 @@ npm i ejs(Motor Platilla para aplicar en html)
 npm i morgan(ver por consola los url)
 npm i nodemon -D (dependencia del desarrollo)
 
+
 Para leer el codigo dentro de una carpeta
 
 node src/file.js or node src 
@@ -26,3 +27,8 @@ Cambiar script:
 
     --> para apoder ejecutarlo npm run dev
 
+Rest: representational state transfer
+
+method: get | put | post | delete
+
+faker : permite generar productos aleatorios

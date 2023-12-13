@@ -267,3 +267,16 @@ fs.unlink("./newfile.txt", (err)=>{
 
 ---------------------// borrar cache
 npm cache clean --force 
+
+
+----------- Event loop:
+
+    Es un proces como un bucle que se gesiona de forma asincrona
+
+    Event Queue: Function - Reques - Event
+    Thred Pool: DB ops - Files - Slow op
+
+Modules: bycript, moment, sharp
+
+streams de lectura
+streams de escritura

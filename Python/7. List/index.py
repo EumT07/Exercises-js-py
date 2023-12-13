@@ -44,7 +44,7 @@ print("Verbs List [extend()]: ",verbs_to)
 verbs_to.insert(3,"watch")
 print("Verbs List [insert()]: ",verbs_to)
 
-#add new elemet at the end of the list
+# add new elemet at the end of the list
 verbs_to.insert(len(verbs_to),"wash")
 print("Verbs List [insert(len())]: ",verbs_to)
 

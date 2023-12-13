@@ -16,3 +16,14 @@ console.log(path.join(__filename));
 const filePath = path.join('content', 'subfolder', 'test.txt')
 console.log(filePath);
 
+
+/*
+
+import { fileURLToPath } from "node:url";
+
+//Start with a function
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+*/
