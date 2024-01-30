@@ -6,10 +6,19 @@ Main: Espesifica el archivo que ejecuta node
 
 Modulos: para instalar
 
-npm i express --> framework de node js
+Packages:
+
+npm i express --save --> framework de node js
 npm i ejs(Motor Platilla para aplicar en html)
 npm i morgan(ver por consola los url)
 npm i nodemon -D (dependencia del desarrollo)
+npm i cors 
+npm i dotenv
+npm i multer cargas de archivos
+npm mongoose -s
+npm i helmet: seguridad
+npm i bcryptjs
+
 
 
 Para leer el codigo dentro de una carpeta

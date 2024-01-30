@@ -41,6 +41,11 @@ print("slincing: ", word[2:-1])#tho
 # Py, cut and extract the entered range
 # Negative number can be used according to the number of characters found
 
+#a[-1]    # last item in the array
+#a[-2:]   # last two items in the array
+#a[:-2]   # everything except the last two items
+
+
 #Change a letter
 word = "N" + word[1:]
 print("Change - from 'Python' to this: ", word)
