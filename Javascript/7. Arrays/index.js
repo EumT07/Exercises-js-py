@@ -82,7 +82,7 @@ console.log("New Arrays: ",cars);
 console.log("unshift: ", cars.unshift("lamborgini"));
 console.log("New Arrays: ",cars);
 
-//shift: add an element At the beginning of the 
+//shift: delete an element At the beginning of the 
 console.log("shift: ", cars.shift());
 console.log("New Arrays: ",cars);
 

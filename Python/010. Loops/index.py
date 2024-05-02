@@ -87,9 +87,6 @@ enum_days = enumerate(days)
 # print(list(enum_days))
 #[(0, 'Tue'), (1, 'Thu'), (2, 'Mon'), (3, 'Wed')]
 
-# converting it to alist
-# print(list(enum_days))
-#[(0, 'Tue'), (1, 'Thu'), (2, 'Mon'), (3, 'Wed')]
 
 """
 Range: it take 3 parameters

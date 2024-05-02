@@ -150,6 +150,17 @@ Para eliminar todos:
 . db.help():  nos muestra un menu de ayuda
 
 Mongo db pdf Python: chapter 22 / 70pg 
+
+$eq - equal - igual
+$lt - low than - menor que
+$lte - low than equal - menor o igual que
+$gt - greater than - mayor que
+$gte - greater than equal - mayor o igual que
+$ne - not equal - distinto
+$in - in - dentro de
+$nin - not in - no dentro de
+
+
 _________________________________________________________________________________________________________
 		DB methods:
         db.adminCommand(nameOrDocument) - switches to 'admin' db, and runs command [just 				calls db.runCommand(...)]

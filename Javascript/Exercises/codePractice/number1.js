@@ -9,20 +9,20 @@
 const num1 = 34;
 const num2 = 100;
 
-const value = (num1, num2) => {
-    let result = num1 + num2;
-    if(num1 == 100 && num2 == 100){
-        return `Num1:${num1} and Num2:${num2} are equal to 100`;
-    }else if(num1 == 100){
-        return `Num1:${num1} is equal to 100`;
-    }else if(num2 == 100){
-        return `Num2:${num2} is equal to 100`;
-    }else if(result == 100){
-        return `Num1 + Num2 are equal to 100`
-    }else{
-        return `Both number are not equal to 100 and even if you add them you won't get 100`;
-    }
-}
+// const value = (num1, num2) => {
+//     let result = num1 + num2;
+//     if(num1 == 100 && num2 == 100){
+//         return `Num1:${num1} and Num2:${num2} are equal to 100`;
+//     }else if(num1 == 100){
+//         return `Num1:${num1} is equal to 100`;
+//     }else if(num2 == 100){
+//         return `Num2:${num2} is equal to 100`;
+//     }else if(result == 100){
+//         return `Num1 + Num2 are equal to 100`
+//     }else{
+//         return `Both number are not equal to 100 and even if you add them you won't get 100`;
+//     }
+// }
 
 // console.log(value(50,50));
 // console.log(value(100,100));
@@ -36,6 +36,7 @@ const value = (num1, num2) => {
 const isEqualTo100 = (a,b) => a === 100 || b === 100 || (a+b) === 100;
 
 // console.log(isEqualTo100(20,80));//True
+// console.log(isEqualTo100(60,40));//True
 
 
 /**
@@ -90,7 +91,8 @@ const getExtension2 = (file) => {
 // charCodeAt
 
 const moveCharacter = (str) => {
-    let result = str.split("").map(char => String.fromCharCode(char.charCodeAt(0) + 1)).join("");
+    // let result = str.split("").map(char => String.fromCharCode(char.charCodeAt(0) + 1)).join("");
+
     return result;
 }
 

@@ -50,7 +50,7 @@ print(num3[-1])# Better than others
 def user():
     return "Alex", "smith", 40
 userDNI = user()
-print(userDNI)
+print(userDNI) # ('Alex', 'smith', 40)
 
 # Destructuring
 name, lastName, age = user()
