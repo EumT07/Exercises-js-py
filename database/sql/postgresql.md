@@ -240,13 +240,17 @@ DROP DATABASE "name of the data"
 
     1. Count()
         - - SELECT country_of_birth AS Country, COUNT(*) FROM person GROUP BY country_of_birth;
-
-
+    
+    2. ORDER BY
         - SELECT country_of_birth AS Country, COUNT(*) FROM person GROUP BY country_of_birth ORDER BY country_of_birth;
 
-        # Having
+    3. Having: Between Group and Order
 
-        - SELECT country_of_birth AS Country, COUNT(*) FROM person GROUP BY country_of_birth HAVING COUNT(*) > 12 ORDER BY country_of_birth;
+        - SELECT country_of_birth AS Country, COUNT(*) 
+        FROM person 
+        GROUP BY country_of_birth 
+        HAVING COUNT(*) > 12 
+        ORDER BY country_of_birth;
 
 
 # Numbers / math metods
@@ -262,7 +266,7 @@ DROP DATABASE "name of the data"
 
 # Alias
 
-1. COALASE(,"NEW VALUE")
+1. COALESCE(,"NEW VALUE")
 
     Permite asignar un valor a un dato vacio
     ejemplo 
@@ -309,13 +313,17 @@ si deseamos tener solo un correo, o usuario podemos alterar la tabla y espesific
 
         Permite modificar la tabla cuando hay llaves establecidad o valores unicos que puedan drlos conflicto
 
-        Ejemplo si intentamos ingresa un nuevo registro igual a uno ya existente, dara error, pero si le aplicarmos : ON CONFLIT (id) DO NOTHING; procedera a no dar errores en cuyo caso que nuestro nuevo registro pasea el mismo id para que funcione debemos estar seguro que la columna que vamos a editar sea unica, si no lo es ejemplo el first_name entonces no tendra efecto.
+        Ejemplo si intentamos ingresa un nuevo registro igual a uno ya existente, dara error, pero si le aplicarmos : 
+        ON CONFLIT (id) DO NOTHING; procedera a no dar errores en cuyo caso que nuestro nuevo registro posea el mismo id para que funcione debemos estar seguro que la columna que vamos a editar no sea unica, si no lo es ejemplo el first_name entonces no tendra efecto.
 
         Para editar valores hacer lo siguiente
 
         insert into person (id, first_name, last_name, email, gender, date_of_birth, country_of_birth) 
+        
         values (926, 'eublan', 'Mata', 'eublanmatamedina@gmail.com', 'Male', '1992-04-07', 'Venezuela')
-        ON CONFLICT (id) DO UPDATE SET email = EXCLUDED.email;
+
+        ON CONFLICT (id) DO UPDATE SET email = EXCLUDED.email,
+        last_name = EXCLUED.last_name;
 
 # returning *
 
@@ -339,15 +347,24 @@ si deseamos tener solo un correo, o usuario podemos alterar la tabla y espesific
         (Tomora referencia principal en la busqueda de la tabla de la izquierda.)
         Left Join: Permite traer una tabla completa trae todos los records que no tengan relacion entre si.
 
+        SELECT * FROM drivers LEFT JOIN vehicles ON vehicles.id = drivers.id;
+
+        SELECT * FROM drivers LEFT JOIN vehicles ON vehicles.id = drivers.id WHERE vehicles.* IS NULL;
+
         Tablas Pgadmin
 
         SELECT * FROM passenger
         LEFT JOIN travel ON (travel.id_person = passenger.id)
         WHERE travel.id IS NULL;
 
+
+        /x :Expanded display is on
+
 # Delete FOREIGN KEYS 
 
         Eleminar estilo cascade eliminando la tabla que contenga el forean key
+
+        DELETE FROM WHERE id = ;
 
 # Export cvs
 

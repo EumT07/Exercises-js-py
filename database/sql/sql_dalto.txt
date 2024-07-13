@@ -1,0 +1,88 @@
+SQL: Structure Query Language
+Busquedas en sql:
+
+Columnas y alias
+
+* AS: Permite cambiar datos de forma temporal
+
+Lastname AS apellido: cambiamos de forma temporal lastname por apellido
+
+Podemos hacer varias consultas de las tablas aplicando AS
+
+* Order BY: Permite ordenar
+
+ASC: ascendente
+DESC: descendente
+
+Jerarquia Ordern: 
+                        Null
+                        Number
+                        Caracteres especiales
+                        Letras
+
+        Nulls LAST: permite ordern los nulls de ultimos
+
+Funcion RANDOM(): Permite devolver o buscar los valores de manera random
+
+Condiciones: 
+
+WHERE: para identificar
+comparacion
+Update: PAra cambiar datos, pero se debe aplicar set 
+
+
+Operadores Logicos:
+                        AND WHERE PRICE > 40 AND PRICE < 45
+                        OR : WHERE FirstName = "Janet" or FirstName = "Laura"
+                        Not: Permite negar las Condiciones
+                        LIMIT: permite limitar las busquedas
+                        != : distinto de --> operador de comparacion 
+
+
+Between: Solo buscar con datos compatibles edades, fechas
+
+Operador Like: busca y filtra registros, se parece al = similar a las expresiones regulares
+
+                        " caracter a buscar % ": principio
+                        " % caracter a buscar ": final
+                        " % caracter a buscar % ": dentro de toda la palabra
+
+                        "%r" : al final : caracter a buscar termine en r
+                        "f%" : al principio : caracter a buscar que comience en f
+
+"name___": caracteres y luego una numeracion de caracteres, ejemplo carlos: c_____  buscara name que comience con c y posean cierta cantidad de caracteres 
+
+Operador is null or not null
+
+condiciones van antes del orden by
+
+Operador in (logico)
+        IN (  )
+
+Funcion de agrupacion: poder agrupar, resumir datos se utilizan en SELECT, podemos obtener metodos estadisticos
+
+count(): permite contar cierta cantindad de valores en un campo
+sum():
+AVG():
+round(valor redondear,numero de decimales):
+MIN(): valor minimo
+MAX():
+
+Group by and having by:
+Where: no hace referencia a las funciones de agregacion:
+
+Group by: agrupas grupos y devuele el primero que encuentre
+Having va despues de group by y permite filtrar grupos
+
+Where : Filtra registros
+
+Pasos: 
+        SELECT
+        WHERE
+        GROUP BY
+        Having 
+                (Comparadores Logicos funciones de agregacion)
+                No podemos usar Una funcion de agrupacion dentro de otra funcion de agrupacion.
+        ORDER BY
+        LIMIT 
+

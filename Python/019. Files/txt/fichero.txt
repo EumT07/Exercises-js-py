@@ -1,0 +1,4 @@
+dfasdfanea es desde fichero creado
+Otra linea creada para poder escribir de nuevo
+Esto fue editado para reeemplezar "Tercera Linea" 
+a es la cuarta linea agregada

@@ -1,0 +1,7 @@
+setup.py
+download.egg-info/PKG-INFO
+download.egg-info/SOURCES.txt
+download.egg-info/dependency_links.txt
+download.egg-info/top_level.txt
+paquete/A/a.py
+paquete/B/b.py

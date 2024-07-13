@@ -1,0 +1,54 @@
+Realizar en scripts
+
+Parte 1:
+
+    A o largo de estos ejercicios vamos a crear un pequeño sistema para gestionar los platos del menú de un restaurante. Por ahora debes empezar creando un script llmado restaurante.py y dentro una funcion crea_bd() que creará una pequeña base de datos de restaurantes con las siguientes tablas:
+
+    Si ya existen deberá tratar la excepcion y mostrar que las tablas ya existen. En caso contrario mostrará que se han creado correctamente.
+
+
+    Nota: La linea FOREIGN KEYT (categoria_id) REFERENCE categoria(id) indica un tipo de clave especial(foránea), por la cual se crea una relacion entre la categoria de un plato con el registro de categorías.
+
+    Llama ala funcion y comprueba que la base de datos se crea correctamente.
+
+Parte 2:
+
+    Crea una fucion llamada agregar_categria() que pida al usuario un nombre de categoria y se encargue de crear la categoria en la base de datos (ten en cuenta que si ya existe dará un error, por que el nombre es UNIQUE)
+
+    Ahora, crea un peuqño menú de opciones dentro del script que te de la bienvenida al sistema y te permita crear una categoria o salir. Añade las siguientes 3 categoria utilizando este menú de opciones:
+
+        Primero
+        Segundo
+        tercero
+
+
+Parte 3:
+     crea una funcion llamada agregar_plato() que muestr al usuario las categorias disponibles y le permita escoger una (escribiendo un numero)
+
+     Luego le pedirá introducir el nombre del plato y lo añadirá a la base de datos, teniendo en cuenta que la cetegoria del plato concuerde con el id de la categoria y que el nombre del plato no puede repetirse ( no es necesario comprobar si la categoria realmente existe, en ese caso simpremente no se isertara el plato)
+
+     agrega la nueva opcion al menu de opciones y aña diferentes platos que desees:
+
+     Primeros: Comida fuerte
+     Segundo: Acompañante
+     Postres: Dulces  
+
+PArte 4:
+    Crea una funcion llamad mostrar_menu() que muestre el menú con todos los platos de forma ordenada: los primeros, los segudos y los postres. Optativamente puedes adornar la forma en que muestras el menú por pantalla.
+
+    
+
+Tkinter:
+
+Realizar una nterfaz grafic con tkinter (menu.py) que muestre de forma elegante el menu del restaurante
+
+Tu eliger el nombre del restaurante y el precio del menú, asi como las tipografias, colores, adornos, y tamaño de la ventana
+. debe conectarse a la base de datos
+
+
+
+
+
+Tips:
+
+durante la creacion de las tablas no es necesario colocar commit solo para actualizaciones de datos preferiblemente.

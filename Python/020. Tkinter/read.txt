@@ -1,0 +1,18 @@
+Widgets componetes graficos
+
+sigue una geraquia:
+
+tk: contenedor base o raiz
+frame: contenedor de otros marcos
+Label: Etiqueta donde se muestra texto estatico
+Entry: texto corto
+Text: texto largo
+Button: Texto, donde el usuario puede hacer click
+Menu: estructura de botones
+boxes / dialogs : ventanas externas o de aviso
+
+
+Cambiar el formato py --> pyw : para evitar la pantalla o terminal de fondo.
+
+
+pyinstalller : python -m PyInstaller --"nameproject"" --onefile --icon=icon.ico  --windowed  main.py
